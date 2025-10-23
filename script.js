@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroTyping = document.getElementById('heroTyping');
 
     // Contract address placeholder - UPDATE THIS WITH YOUR ACTUAL CONTRACT
-    const CONTRACT_ADDRESS = 'YOUR_CONTRACT_ADDRESS_HERE';
+    const CONTRACT_ADDRESS = 'FcHRYaRcYCFALJxwvRrkxJLYu56rPnyjVtwSKmxQpump';
 
     const responses = {
         'yes': [
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     clickableLinks.forEach(link => {
                         link.addEventListener('click', function() {
                             // Replace with your actual pump.fun token URL
-                            window.open('https://pump.fun', '_blank');
+                            window.open('https://pump.fun/FcHRYaRcYCFALJxwvRrkxJLYu56rPnyjVtwSKmxQpump', '_blank');
                         });
                     });
 
