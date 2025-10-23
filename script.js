@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         'ready': [
             '&gt; "EXCELLENT."',
-            '&gt; "YOUR MISSION: BUY $MIAMI"',
+            '&gt; "YOUR MISSION: BUY $HOTLINE"',
             '&gt; "CONTRACT ADDRESS:"',
             `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
             '&gt; <span class="clickable-link">[ ̶A̶̶N̶̶S̶̶W̶̶E̶̶R̶̶ ̶̶T̶̶H̶̶E̶̶ ̶̶C̶̶A̶̶L̶̶L̶ ]</span>'
@@ -604,4 +604,4 @@ if ('IntersectionObserver' in window) {
 // ==================== CONSOLE MESSAGE ====================
 console.log('%c HOTLINE MIAMI TOKEN ', 'background: #ff006e; color: #000; font-size: 20px; font-weight: bold; padding: 10px;');
 console.log('%c DO YOU LIKE HURTING PEOPLE? ', 'background: #00f5ff; color: #000; font-size: 16px; font-weight: bold; padding: 5px;');
-console.log('%c $MIAMI - The most violent token in crypto ', 'color: #ff9e00; font-size: 14px;');
+console.log('%c $HOTLINE - The most violent token in crypto ', 'color: #ff9e00; font-size: 14px;');
