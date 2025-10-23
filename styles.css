@@ -1464,6 +1464,43 @@ button, a, input {
     z-index: 1;
 }
 
+/* Special styling for Pump.fun card */
+.pump-card {
+    border: 3px solid var(--neon-pink);
+    background: rgba(255, 0, 110, 0.05);
+    animation: pumpPulse 2s infinite;
+}
+
+.pump-card::before {
+    background: radial-gradient(circle, var(--neon-pink) 0%, transparent 70%);
+}
+
+.pump-card:hover {
+    border-color: var(--neon-orange);
+    box-shadow: 0 0 60px var(--neon-pink);
+}
+
+.pump-card .social-icon {
+    filter: drop-shadow(0 0 30px var(--neon-pink));
+    animation: skullSpin 4s ease-in-out infinite;
+}
+
+@keyframes pumpPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 0, 110, 0.6);
+    }
+}
+
+@keyframes skullSpin {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-5deg) scale(1.1); }
+    50% { transform: rotate(0deg) scale(1); }
+    75% { transform: rotate(5deg) scale(1.1); }
+}
+
 .final-cta {
     text-align: center;
 }
