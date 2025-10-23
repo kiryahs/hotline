@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const musicIcon = document.getElementById('musicIcon');
     const volumeSlider = document.getElementById('volumeSlider');
 
-    // Set initial volume
-    bgMusic.volume = 0.7;
+    // Set initial volume (quieter on load)
+    bgMusic.volume = 0.3;
 
     // Attempt to autoplay music
     // Note: Most browsers block autoplay with sound until user interaction
@@ -44,41 +44,52 @@ document.addEventListener('DOMContentLoaded', function() {
         bgMusic.volume = this.value / 100;
     });
 
-    // ==================== INTERACTIVE CHAT ====================
-    const chatInput = document.getElementById('chatInput');
-    const chatSend = document.getElementById('chatSend');
-    const chatTranscript = document.getElementById('chatTranscript');
-    const typingIndicator = document.getElementById('typingIndicator');
+    // Update volume slider to match initial volume
+    volumeSlider.value = 30;
+
+    // ==================== INTERACTIVE CHAT (HERO SECTION) ====================
+    const heroInput = document.getElementById('heroInput');
+    const heroSend = document.getElementById('heroSend');
+    const heroChat = document.getElementById('heroChat');
+    const heroTyping = document.getElementById('heroTyping');
+
+    // Contract address placeholder - UPDATE THIS WITH YOUR ACTUAL CONTRACT
+    const CONTRACT_ADDRESS = 'YOUR_CONTRACT_ADDRESS_HERE';
 
     const responses = {
         'yes': [
             '&gt; "GOOD. THE MASKS AWAIT YOU."',
             '&gt; "PICK UP YOUR WEAPON..."',
-            '&gt; "PUMP.FUN IS YOUR TARGET."',
+            '&gt; "HERE IS YOUR TARGET COORDINATES:"',
+            `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
             '&gt; <span class="clickable-link">[CLICK TO BUY $MIAMI]</span>'
         ],
         'no': [
             '&gt; "YOU DON\'T HAVE A CHOICE."',
             '&gt; "THE CALL HAS BEEN MADE."',
-            '&gt; "YOU WILL JOIN US."',
-            '&gt; [DIAL TONE]'
+            '&gt; "HERE ARE YOUR ORDERS:"',
+            `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
+            '&gt; <span class="clickable-link">[CLICK TO PROCEED]</span>'
         ],
         'ready': [
             '&gt; "EXCELLENT."',
             '&gt; "YOUR MISSION: BUY $MIAMI"',
-            '&gt; "DON\'T DISAPPOINT US."',
-            '&gt; <span class="clickable-link">[CLICK TO PROCEED]</span>'
+            '&gt; "CONTRACT ADDRESS:"',
+            `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
+            '&gt; <span class="clickable-link">[CLICK TO EXECUTE]</span>'
         ],
         'default': [
             '&gt; "WRONG ANSWER."',
-            '&gt; "TRY AGAIN."',
-            '&gt; "ARE YOU READY TO JOIN?"'
+            '&gt; "BUT I\'LL GIVE YOU THE ADDRESS ANYWAY..."',
+            `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
+            '&gt; "NOW... ARE YOU READY TO JOIN?"'
         ],
         'why': [
             '&gt; "DON\'T ASK QUESTIONS."',
             '&gt; "JUST DO AS YOU\'RE TOLD."',
-            '&gt; "THE MONEY IS YOURS."',
-            '&gt; [STATIC]'
+            '&gt; "HERE\'S THE CONTRACT:"',
+            `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
+            '&gt; <span class="clickable-link">[GET IN NOW]</span>'
         ],
         'hello': [
             '&gt; "WE KNOW WHO YOU ARE."',
@@ -93,19 +104,19 @@ document.addEventListener('DOMContentLoaded', function() {
         message.innerHTML = text;
 
         // Insert before typing indicator
-        chatTranscript.insertBefore(message, typingIndicator);
+        heroChat.insertBefore(message, heroTyping);
 
         // Scroll to bottom
-        chatTranscript.scrollTop = chatTranscript.scrollHeight;
+        heroChat.scrollTop = heroChat.scrollHeight;
     }
 
     function showTypingIndicator() {
-        typingIndicator.style.display = 'flex';
-        chatTranscript.scrollTop = chatTranscript.scrollHeight;
+        heroTyping.style.display = 'flex';
+        heroChat.scrollTop = heroChat.scrollHeight;
     }
 
     function hideTypingIndicator() {
-        typingIndicator.style.display = 'none';
+        heroTyping.style.display = 'none';
     }
 
     function sendBotMessages(messages, delay = 800) {
@@ -119,13 +130,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     showTypingIndicator();
                 }
 
-                // Add click event to clickable links after message is added
+                // Add click event to clickable links and contract address after message is added
                 setTimeout(() => {
-                    const clickableLinks = chatTranscript.querySelectorAll('.clickable-link');
+                    const clickableLinks = heroChat.querySelectorAll('.clickable-link');
                     clickableLinks.forEach(link => {
                         link.addEventListener('click', function() {
                             // Replace with your actual pump.fun token URL
                             window.open('https://pump.fun', '_blank');
+                        });
+                    });
+
+                    // Make contract address copyable on click
+                    const contractAddresses = heroChat.querySelectorAll('.contract-address');
+                    contractAddresses.forEach(addr => {
+                        addr.addEventListener('click', function() {
+                            navigator.clipboard.writeText(CONTRACT_ADDRESS).then(() => {
+                                // Show copied feedback
+                                const originalText = this.innerHTML;
+                                this.innerHTML = '[COPIED!]';
+                                setTimeout(() => {
+                                    this.innerHTML = originalText;
+                                }, 1500);
+                            });
                         });
                     });
                 }, 100);
@@ -134,15 +160,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleUserInput() {
-        const userInput = chatInput.value.trim().toLowerCase();
+        const userInput = heroInput.value.trim().toLowerCase();
 
         if (!userInput) return;
 
         // Add user message
-        addMessage(`&gt; YOU: "${chatInput.value.toUpperCase()}"`, true);
+        addMessage(`&gt; YOU: "${heroInput.value.toUpperCase()}"`, true);
 
         // Clear input
-        chatInput.value = '';
+        heroInput.value = '';
 
         // Determine response
         let responseKey = 'default';
@@ -164,10 +190,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Send on button click
-    chatSend.addEventListener('click', handleUserInput);
+    heroSend.addEventListener('click', handleUserInput);
 
     // Send on Enter key
-    chatInput.addEventListener('keypress', function(e) {
+    heroInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
             handleUserInput();
         }

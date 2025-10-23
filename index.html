@@ -58,20 +58,33 @@
                 <div class="pulse-ring"></div>
             </div>
 
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <span class="stat-label">SUPPLY</span>
-                    <span class="stat-value neon-pink">1,000,000,000</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-label">TAX</span>
-                    <span class="stat-value neon-blue">0%</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-label">LP</span>
-                    <span class="stat-value neon-orange">BURNED</span>
+            <!-- Interactive Chat in Hero -->
+            <div class="hero-chat-container">
+                <div class="answering-machine hero-machine">
+                    <div class="machine-display">
+                        <div class="red-light"></div>
+                        <div class="message-text">
+                            <span class="blink">●</span> INCOMING TRANSMISSION
+                        </div>
+                    </div>
+                    <div class="machine-transcript" id="heroChat">
+                        <p class="transcript-line">&gt; "HELLO..."</p>
+                        <p class="transcript-line">&gt; "WE HAVE A JOB FOR YOU..."</p>
+                        <p class="transcript-line">&gt; "ARE YOU READY TO JOIN?"</p>
+                        <p class="transcript-line typing-indicator" id="heroTyping" style="display: none;">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </p>
+                    </div>
+                    <div class="chat-input-container">
+                        <input
+                            type="text"
+                            id="heroInput"
+                            class="chat-input"
+                            placeholder="TYPE YOUR ANSWER..."
+                            maxlength="100"
+                        />
+                        <button class="chat-send" id="heroSend">SEND</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,34 +146,6 @@
                 </div>
             </div>
 
-            <div class="static-divider"></div>
-
-            <div class="answering-machine">
-                <div class="machine-display">
-                    <div class="red-light"></div>
-                    <div class="message-text">
-                        <span class="blink">●</span> NEW MESSAGE
-                    </div>
-                </div>
-                <div class="machine-transcript" id="chatTranscript">
-                    <p class="transcript-line">&gt; "HELLO..."</p>
-                    <p class="transcript-line">&gt; "WE HAVE A JOB FOR YOU..."</p>
-                    <p class="transcript-line">&gt; "ARE YOU READY TO JOIN?"</p>
-                    <p class="transcript-line typing-indicator" id="typingIndicator" style="display: none;">
-                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                    </p>
-                </div>
-                <div class="chat-input-container">
-                    <input
-                        type="text"
-                        id="chatInput"
-                        class="chat-input"
-                        placeholder="TYPE YOUR ANSWER..."
-                        maxlength="100"
-                    />
-                    <button class="chat-send" id="chatSend">SEND</button>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -197,9 +182,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p class="disclaimer">
-                $MIAMI IS A MEME COIN WITH NO INTRINSIC VALUE OR EXPECTATION OF FINANCIAL RETURN.
-                THE TOKEN IS FOR ENTERTAINMENT PURPOSES ONLY.
+            <p class="footer-message">
+                THE PHONE IS RINGING. FORTUNES ARE MADE BY THOSE WHO ANSWER.
+                <br>
+                THE MASKS CHOOSE THE BRAVE. THE WEAK STAY POOR.
+                <br>
+                <span class="neon-pink">YOUR MISSION AWAITS.</span>
             </p>
             <p class="copyright">
                 © 2024 HOTLINE MIAMI TOKEN | DO YOU LIKE HURTING PEOPLE?

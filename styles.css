@@ -1074,6 +1074,54 @@ button, a, input {
     }
 }
 
+.contract-address {
+    color: var(--neon-green);
+    font-family: var(--font-mono);
+    font-weight: 900;
+    text-shadow: 0 0 15px var(--neon-green);
+    cursor: pointer;
+    background: rgba(57, 255, 20, 0.1);
+    padding: 5px 10px;
+    border: 1px solid var(--neon-green);
+    display: inline-block;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    word-break: break-all;
+}
+
+.contract-address:hover {
+    background: rgba(57, 255, 20, 0.2);
+    transform: scale(1.05);
+    text-shadow: 0 0 25px var(--neon-green);
+}
+
+/* Hero Chat Container */
+.hero-chat-container {
+    margin-top: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-machine {
+    max-width: 100%;
+}
+
+#heroChat {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Footer Message */
+.footer-message {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 /* ==================== TOKENOMICS SECTION ==================== */
 .vhs-effect {
     position: absolute;
