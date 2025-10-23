@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const volumeSlider = document.getElementById('volumeSlider');
 
     // Set initial volume (quieter on load)
-    bgMusic.volume = 0.3;
+    bgMusic.volume = 0.15;
 
     // Attempt to autoplay music
     // Note: Most browsers block autoplay with sound until user interaction
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Update volume slider to match initial volume
-    volumeSlider.value = 30;
+    volumeSlider.value = 15;
 
     // ==================== INTERACTIVE CHAT (HERO SECTION) ====================
     const heroInput = document.getElementById('heroInput');
@@ -62,21 +62,21 @@ document.addEventListener('DOMContentLoaded', function() {
             '&gt; "PICK UP YOUR WEAPON..."',
             '&gt; "HERE IS YOUR TARGET COORDINATES:"',
             `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
-            '&gt; <span class="clickable-link">[CLICK TO BUY $MIAMI]</span>'
+            '&gt; <span class="clickable-link">[ ̶B̶̶E̶̶C̶̶O̶̶M̶̶E̶̶ ̶̶O̶̶N̶̶E̶̶ ̶̶O̶̶F̶̶ ̶̶U̶̶S̶ ]</span>'
         ],
         'no': [
             '&gt; "YOU DON\'T HAVE A CHOICE."',
             '&gt; "THE CALL HAS BEEN MADE."',
             '&gt; "HERE ARE YOUR ORDERS:"',
             `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
-            '&gt; <span class="clickable-link">[CLICK TO PROCEED]</span>'
+            '&gt; <span class="clickable-link">[ ̶J̶̶O̶̶I̶̶N̶̶ ̶̶T̶̶H̶̶E̶̶ ̶̶F̶̶A̶̶M̶̶I̶̶L̶̶Y̶ ]</span>'
         ],
         'ready': [
             '&gt; "EXCELLENT."',
             '&gt; "YOUR MISSION: BUY $MIAMI"',
             '&gt; "CONTRACT ADDRESS:"',
             `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
-            '&gt; <span class="clickable-link">[CLICK TO EXECUTE]</span>'
+            '&gt; <span class="clickable-link">[ ̶A̶̶N̶̶S̶̶W̶̶E̶̶R̶̶ ̶̶T̶̶H̶̶E̶̶ ̶̶C̶̶A̶̶L̶̶L̶ ]</span>'
         ],
         'default': [
             '&gt; "WRONG ANSWER."',
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             '&gt; "JUST DO AS YOU\'RE TOLD."',
             '&gt; "HERE\'S THE CONTRACT:"',
             `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
-            '&gt; <span class="clickable-link">[GET IN NOW]</span>'
+            '&gt; <span class="clickable-link">[ ̶C̶̶O̶̶M̶̶P̶̶L̶̶E̶̶T̶̶E̶̶ ̶̶M̶̶I̶̶S̶̶S̶̶I̶̶O̶̶N̶ ]</span>'
         ],
         'hello': [
             '&gt; "WE KNOW WHO YOU ARE."',
