@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTLINE MIAMI TOKEN | $MIAMI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scanline Effect Overlay -->
+    <div class="scanlines"></div>
+    <div class="glitch-overlay"></div>
+
+    <!-- Audio Player -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Controls -->
+    <div class="music-controls">
+        <button id="musicToggle" class="neon-button-small">
+            <span id="musicIcon">🔊</span>
+        </button>
+        <div class="volume-control">
+            <input type="range" id="volumeSlider" min="0" max="100" value="70">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+        <div class="neon-grid"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="HOTLINE MIAMI">HOTLINE MIAMI</h1>
+            </div>
+            <div class="token-symbol">
+                <span class="neon-text">$MIAMI</span>
+            </div>
+            <p class="tagline">
+                <span class="typewriter">DO YOU LIKE HURTING PEOPLE? // EMBRACE THE CHAOS</span>
+            </p>
+
+            <div class="cta-container">
+                <button class="buy-button" onclick="window.open('https://pump.fun', '_blank')">
+                    <span class="button-text">BUY $MIAMI NOW</span>
+                    <span class="button-glitch">BUY $MIAMI NOW</span>
+                </button>
+                <div class="pulse-ring"></div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">SUPPLY</span>
+                    <span class="stat-value neon-pink">1,000,000,000</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">TAX</span>
+                    <span class="stat-value neon-blue">0%</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">LP</span>
+                    <span class="stat-value neon-orange">BURNED</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mask-container">
+            <div class="mask mask-richard"></div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>SCROLL DOWN</span>
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-dark">
+        <div class="pixel-rain"></div>
+
+        <div class="content-wrapper">
+            <h2 class="section-title glitch" data-text="THE CALL">THE CALL</h2>
+
+            <div class="mission-board">
+                <div class="mission-cards">
+                    <div class="mission-card glitch-hover" data-glitch="APRIL 3RD, 1989">
+                        <div class="date-stamp">APRIL 3RD, 1989</div>
+                        <div class="mission-text">
+                            <span class="blood-splat">※</span>
+                            YOU WILL RECEIVE A PHONE CALL.
+                            <br>THE VOICE TELLS YOU WHERE TO GO.
+                            <br>YOU DON'T QUESTION IT.
+                            <br><span class="highlight">YOU JUST BUY.</span>
+                        </div>
+                        <div class="pixelated-divider">████████████</div>
+                    </div>
+
+                    <div class="mission-card glitch-hover" data-glitch="NO ESCAPE">
+                        <div class="date-stamp">NO ESCAPE</div>
+                        <div class="mission-text">
+                            <span class="blood-splat">✱</span>
+                            THE MASKS DEMAND VIOLENCE.
+                            <br>THE CHARTS DEMAND BLOOD.
+                            <br>THERE IS NO UTILITY HERE.
+                            <br><span class="highlight">ONLY CHAOS.</span>
+                        </div>
+                        <div class="pixelated-divider">████████████</div>
+                    </div>
+
+                    <div class="mission-card glitch-hover" data-glitch="DO YOU ENJOY HURTING PEOPLE?">
+                        <div class="date-stamp">DO YOU ENJOY HURTING PEOPLE?</div>
+                        <div class="mission-text">
+                            <span class="blood-splat">⚠</span>
+                            THE FLOOR IS STICKY WITH PROFITS.
+                            <br>RICHARD ASKS YOU QUESTIONS.
+                            <br>BUT YOU ALREADY KNOW THE ANSWER.
+                            <br><span class="highlight">YES.</span>
+                        </div>
+                        <div class="pixelated-divider">████████████</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="static-divider"></div>
+
+            <div class="answering-machine">
+                <div class="machine-display">
+                    <div class="red-light"></div>
+                    <div class="message-text">
+                        <span class="blink">●</span> NEW MESSAGE
+                    </div>
+                </div>
+                <div class="machine-transcript" id="chatTranscript">
+                    <p class="transcript-line">&gt; "HELLO..."</p>
+                    <p class="transcript-line">&gt; "WE HAVE A JOB FOR YOU..."</p>
+                    <p class="transcript-line">&gt; "ARE YOU READY TO JOIN?"</p>
+                    <p class="transcript-line typing-indicator" id="typingIndicator" style="display: none;">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    </p>
+                </div>
+                <div class="chat-input-container">
+                    <input
+                        type="text"
+                        id="chatInput"
+                        class="chat-input"
+                        placeholder="TYPE YOUR ANSWER..."
+                        maxlength="100"
+                    />
+                    <button class="chat-send" id="chatSend">SEND</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Community Section -->
+    <section id="community" class="section">
+        <div class="content-wrapper">
+            <h2 class="section-title glitch" data-text="JOIN THE MASSACRE">JOIN THE MASSACRE</h2>
+
+            <div class="social-grid">
+                <a href="#" class="social-card" target="_blank">
+                    <div class="social-icon">𝕏</div>
+                    <span>TWITTER</span>
+                </a>
+                <a href="#" class="social-card" target="_blank">
+                    <div class="social-icon">✈</div>
+                    <span>TELEGRAM</span>
+                </a>
+                <a href="#" class="social-card" target="_blank">
+                    <div class="social-icon">♪</div>
+                    <span>DISCORD</span>
+                </a>
+            </div>
+
+            <div class="cta-container final-cta">
+                <button class="buy-button mega" onclick="window.open('https://pump.fun', '_blank')">
+                    <span class="button-text">ANSWER THE CALL</span>
+                    <span class="button-glitch">ANSWER THE CALL</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="disclaimer">
+                $MIAMI IS A MEME COIN WITH NO INTRINSIC VALUE OR EXPECTATION OF FINANCIAL RETURN.
+                THE TOKEN IS FOR ENTERTAINMENT PURPOSES ONLY.
+            </p>
+            <p class="copyright">
+                © 2024 HOTLINE MIAMI TOKEN | DO YOU LIKE HURTING PEOPLE?
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
