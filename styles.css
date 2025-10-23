@@ -31,11 +31,11 @@ body {
     color: #fff;
     overflow-x: hidden;
     position: relative;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="24" viewBox="0 0 48 24"><defs><linearGradient id="carBody" x1="0%25" y1="0%25" x2="100%25" y2="0%25"><stop offset="0%25" style="stop-color:%2300f5ff;stop-opacity:1"/><stop offset="100%25" style="stop-color:%23ff006e;stop-opacity:1"/></linearGradient></defs><rect x="4" y="8" width="32" height="8" fill="url(%23carBody)" rx="1"/><rect x="6" y="6" width="8" height="4" fill="%2300f5ff"/><rect x="16" y="6" width="8" height="4" fill="%2300f5ff"/><circle cx="12" cy="17" r="2.5" fill="%23333" stroke="%23ff006e" stroke-width="1"/><circle cx="28" cy="17" r="2.5" fill="%23333" stroke="%23ff006e" stroke-width="1"/><polygon points="36,10 44,12 36,14" fill="%23ff9e00"/><polygon points="42,12 46,12 44,10" fill="%23ffff00" opacity="0.8"/><polygon points="42,12 46,12 44,14" fill="%23ffff00" opacity="0.8"/><rect x="4" y="10" width="2" height="4" fill="%23ff006e"/></svg>'), auto;
+    cursor: url('Back to the Future DeLorean Time Machine--cursor--SweezyCursors..cur'), url('Back to the Future DeLorean Time Machine--cursor--SweezyCursors.png'), auto;
 }
 
 button, a, input {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="24" viewBox="0 0 48 24"><defs><linearGradient id="carBody" x1="0%25" y1="0%25" x2="100%25" y2="0%25"><stop offset="0%25" style="stop-color:%2300f5ff;stop-opacity:1"/><stop offset="100%25" style="stop-color:%23ff006e;stop-opacity:1"/></linearGradient></defs><rect x="4" y="8" width="32" height="8" fill="url(%23carBody)" rx="1"/><rect x="6" y="6" width="8" height="4" fill="%2300f5ff"/><rect x="16" y="6" width="8" height="4" fill="%2300f5ff"/><circle cx="12" cy="17" r="2.5" fill="%23333" stroke="%23ff006e" stroke-width="1"/><circle cx="28" cy="17" r="2.5" fill="%23333" stroke="%23ff006e" stroke-width="1"/><polygon points="36,10 44,12 36,14" fill="%23ff9e00"/><polygon points="42,12 46,12 44,10" fill="%23ffff00" opacity="0.8"/><polygon points="42,12 46,12 44,14" fill="%23ffff00" opacity="0.8"/><rect x="4" y="10" width="2" height="4" fill="%23ff006e"/></svg>'), pointer;
+    cursor: url('Back to the Future DeLorean Time Machine--cursor--SweezyCursors..cur'), url('Back to the Future DeLorean Time Machine--cursor--SweezyCursors.png'), pointer;
 }
 
 /* ==================== SCANLINES & OVERLAYS ==================== */
