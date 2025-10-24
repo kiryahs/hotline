@@ -1,4 +1,4 @@
-# HOTLINE MIAMI TOKEN - $MIAMI
+# HOTLINE MIAMI TOKEN - $HOTPUMP
 
 A single-page website for a Hotline Miami-inspired pump fun token featuring intense 80s aesthetics, neon visuals, and synthwave vibes.
 
@@ -39,7 +39,7 @@ A single-page website for a Hotline Miami-inspired pump fun token featuring inte
 1. Open `index.html` in a modern web browser
 2. Allow audio autoplay for the full experience (may require user interaction)
 3. Scroll through sections to explore all features
-4. Click the "BUY $MIAMI NOW" buttons to navigate to pump.fun (update href as needed)
+4. Click the "BUY $HOTPUMP NOW" buttons to navigate to pump.fun (update href as needed)
 
 ## Customization
 

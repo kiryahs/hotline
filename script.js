@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroTyping = document.getElementById('heroTyping');
 
     // Contract address placeholder - UPDATE THIS WITH YOUR ACTUAL CONTRACT
-    const CONTRACT_ADDRESS = 'FcHRYaRcYCFALJxwvRrkxJLYu56rPnyjVtwSKmxQpump';
+    const CONTRACT_ADDRESS = 'YOUR_CONTRACT_ADDRESS_HERE';
 
     const responses = {
         'yes': [
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         'ready': [
             '&gt; "EXCELLENT."',
-            '&gt; "YOUR MISSION: BUY $HOTLINE"',
+            '&gt; "YOUR MISSION: BUY $HOTPUMP"',
             '&gt; "CONTRACT ADDRESS:"',
             `&gt; <span class="contract-address">${CONTRACT_ADDRESS}</span>`,
             '&gt; <span class="clickable-link">[ ̶A̶̶N̶̶S̶̶W̶̶E̶̶R̶̶ ̶̶T̶̶H̶̶E̶̶ ̶̶C̶̶A̶̶L̶̶L̶ ]</span>'
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     clickableLinks.forEach(link => {
                         link.addEventListener('click', function() {
                             // Replace with your actual pump.fun token URL
-                            window.open('https://pump.fun/FcHRYaRcYCFALJxwvRrkxJLYu56rPnyjVtwSKmxQpump', '_blank');
+                            window.open('https://pump.fun/YOUR_CONTRACT_ADDRESS_HERE', '_blank');
                         });
                     });
 
@@ -604,4 +604,4 @@ if ('IntersectionObserver' in window) {
 // ==================== CONSOLE MESSAGE ====================
 console.log('%c HOTLINE MIAMI TOKEN ', 'background: #ff006e; color: #000; font-size: 20px; font-weight: bold; padding: 10px;');
 console.log('%c DO YOU LIKE HURTING PEOPLE? ', 'background: #00f5ff; color: #000; font-size: 16px; font-weight: bold; padding: 5px;');
-console.log('%c $HOTLINE - The most violent token in crypto ', 'color: #ff9e00; font-size: 14px;');
+console.log('%c $HOTPUMP - The most violent token in crypto ', 'color: #ff9e00; font-size: 14px;');
